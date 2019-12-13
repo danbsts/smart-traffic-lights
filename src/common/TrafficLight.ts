@@ -15,7 +15,7 @@ export class TrafficLight {
         this.position = position;
         this.greenTime = greenTime;
         this.redTime = redTime;
-        this.yellowTime = 3000;
+        this.yellowTime = 3;
         this.actualStatus = actualStatus;
         this.carsOnQueue = carsOnQueue;
     }
@@ -67,6 +67,6 @@ class Timer {
             this.counter = this.counter - 1;
             console.log(this.counter)
             if(this.counter === 0) clearInterval(intervalId)
-        }, 1)
+        }, 1000)
     }
 }

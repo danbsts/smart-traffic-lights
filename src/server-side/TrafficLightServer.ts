@@ -20,7 +20,7 @@ app.use(allowCrossDomain);
 
 app.use(bodyParser.json());
 
-app.get('/getStatus', function (req, res) {
+app.post('/getStatus', function (req, res) {
     let getTrafficLight: GetTrafficLight = <GetTrafficLight> req.body;
     let ans: TrafficLight = trafficLights.getById(getTrafficLight.id);
     if (ans) {
@@ -32,6 +32,11 @@ app.get('/getStatus', function (req, res) {
 
 app.get('/getAll', function (req, res) {
   res.send(JSON.stringify(trafficLights.getAll()))
+})
+
+app.get('/calculate', function (req, res) {
+    trafficLights.calculateTimeForAll();
+    res.send(JSON.stringify("Calculando..."))
 })
 
 app.post('/refresh', function (req: express.Request, res: express.Response) {

@@ -31,7 +31,7 @@ export class TrafficLightRepository {
                         lastTime = lastTime + 100/60 + this.trafficLightsNorthWay[l].carsOnQueue;
                     }
                 } else {
-                    for(let l = this.min(pos + segmentationSize, this.trafficLightsSouthWay.length); l > pos; l--) {
+                    for(let l = this.min(pos + segmentationSize, this.trafficLightsSouthWay.length - 1); l > pos; l--) {
                         this.trafficLightsSouthWay[l].actualTime = lastTime;
                         this.trafficLightsNorthWay[l].actualTime = lastTime;
                         lastTime = lastTime + 100/60 + this.trafficLightsSouthWay[l].carsOnQueue;
@@ -49,7 +49,7 @@ export class TrafficLightRepository {
                 }
             } else {
                 let lastTime = 0;
-                for (let i = this.trafficLightsSouthWay.length; i > 0; i--) {
+                for (let i = this.trafficLightsSouthWay.length - 1; i > 0; i--) {
                     this.trafficLightsNorthWay[i].actualTime = lastTime;
                     this.trafficLightsSouthWay[i].actualTime = lastTime;
                     lastTime = lastTime + 100/60 + this.trafficLightsSouthWay[i].carsOnQueue;
@@ -60,6 +60,9 @@ export class TrafficLightRepository {
     }
 
     calculateState() {
+        for(var i = 0; i < this.trafficLightsNorthWay.length; i++) {
+            this.trafficLightsNorthWay[i].calculateState();
+        }
         this.trafficLightsNorthWay.forEach(trafficLight => trafficLight.calculateState);
         this.trafficLightsSouthWay.forEach(trafficLight => trafficLight.calculateState);
     }
