@@ -4,6 +4,7 @@ export class TrafficLight {
     position: number;
     greenTime: number;
     redTime: number;
+    actualTime: number;
     yellowTime: number;
     actualStatus: string;
     carsOnQueue: number;
@@ -36,6 +37,27 @@ export class TrafficLight {
             this.actualStatus = "red";
             new Timer(this.redTime);
         }
+    }
+
+    calculateState() {
+        let nextTime = this.redTime;
+        this.actualStatus = "red";
+        while(this.actualTime > nextTime) {
+            this.actualTime = this.actualTime - this.remainingTime(this.actualStatus);
+            this.actualStatus = this.nextState(this.actualStatus);
+        }
+    }
+
+    nextState(state: string): string {
+        if (state == "yellow") return "red";
+        if (state == "red") return "green";
+        return "yellow";
+    }
+
+    remainingTime(state: string): number {
+        if (state == "yellow") return this.yellowTime;
+        if (state == "red") return this.redTime;
+        return this.greenTime;
     }
 }
 
