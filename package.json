@@ -5,7 +5,7 @@
   "scripts": {
     "tsc": "tsc",
     "postinstall": "npm run tsc",
-    "start": "tsc && node ./typeScript/MapsifyServer.js"
+    "start": "tsc && node ./typeScript/TrafficLightServer.js"
   },
   "author": "Daniel Bastos",
   "license": "MIT",

@@ -5,7 +5,7 @@ export class TrafficLightRepository {
     trafficLightsSouthWay : TrafficLight[] = [];
     trafficLightsNorthWay : TrafficLight[] = [];
 
-    getDefaultInstances() {
+    constructor() {
         this.trafficLightsSouthWay = new TrafficLightsFixture().getDefaultSouth();
         this.trafficLightsNorthWay = new TrafficLightsFixture().getDefaultNorth();
     }
@@ -73,6 +73,18 @@ export class TrafficLightRepository {
             }
         }
         return false;
+    }
+
+    getById(id: number): TrafficLight {
+        let ans: TrafficLight;
+        this.trafficLightsNorthWay.forEach(elem => {
+            if(elem.id == id) ans = elem;
+        });
+        return ans;
+    }
+
+    getAll(): TrafficLight[] {
+        return this.trafficLightsNorthWay;
     }
 
     min(a: number, b: number): number {

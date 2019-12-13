@@ -9,7 +9,7 @@ export class TrafficLight {
     actualStatus: string;
     carsOnQueue: number;
 
-    constructor(id, streetSpeed, position, greenTime, redTime, actualStatus, carsOnQueue) {
+    constructor(id: number, streetSpeed: number, position: number, greenTime: number, redTime: number, actualStatus: string, carsOnQueue: number) {
         this.id = id;
         this.streetSpeed = streetSpeed;
         this.position = position;
