@@ -16,6 +16,7 @@ export class TrafficLightOperator {
             this.trafficLight.actualStatus = this.trafficLight.nextStateOriginal(this.trafficLight.actualStatus);
             new Timer(this.getTime());
             this.trafficLight.actualStatus = this.trafficLight.nextStateOriginal(this.trafficLight.actualStatus);
+            this.controller.update(this.trafficLight);
         }
     }
 
