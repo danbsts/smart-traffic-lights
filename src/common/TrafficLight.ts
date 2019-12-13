@@ -18,6 +18,7 @@ export class TrafficLight {
         this.yellowTime = 3;
         this.actualStatus = actualStatus;
         this.carsOnQueue = carsOnQueue;
+        this.actualTime = 0;
     }
 
     setGreen(greenTime: number) {
@@ -45,13 +46,14 @@ export class TrafficLight {
         while(this.actualTime > nextTime) {
             this.actualTime = this.actualTime - this.remainingTime(this.actualStatus);
             this.actualStatus = this.nextState(this.actualStatus);
+            nextTime = this.remainingTime(this.actualStatus);
         }
     }
 
     nextState(state: string): string {
-        if (state == "yellow") return "red";
-        if (state == "red") return "green";
-        return "yellow";
+        if (state == "yellow") return "green";
+        if (state == "red") return "yellow";
+        return "red";
     }
 
     remainingTime(state: string): number {

@@ -28,13 +28,13 @@ export class TrafficLightRepository {
                     for(let l = pos; l < pos + segmentationSize && l < this.trafficLightsNorthWay.length; l++) {
                         this.trafficLightsNorthWay[l].actualTime = lastTime;
                         this.trafficLightsSouthWay[l].actualTime = lastTime;
-                        lastTime = lastTime + 100/60 + this.trafficLightsNorthWay[l].carsOnQueue;
+                        lastTime = lastTime + 100/this.trafficLightsNorthWay[l].streetSpeed + this.trafficLightsNorthWay[l].carsOnQueue;
                     }
                 } else {
                     for(let l = this.min(pos + segmentationSize, this.trafficLightsSouthWay.length - 1); l > pos; l--) {
                         this.trafficLightsSouthWay[l].actualTime = lastTime;
                         this.trafficLightsNorthWay[l].actualTime = lastTime;
-                        lastTime = lastTime + 100/60 + this.trafficLightsSouthWay[l].carsOnQueue;
+                        lastTime = lastTime + 100/this.trafficLightsNorthWay[l].streetSpeed + this.trafficLightsSouthWay[l].carsOnQueue;
                     }
                 }
                 pos = pos + segmentationSize;
@@ -45,14 +45,14 @@ export class TrafficLightRepository {
                 for (let i = 0; i < this.trafficLightsNorthWay.length; i++) {
                     this.trafficLightsNorthWay[i].actualTime = lastTime;
                     this.trafficLightsSouthWay[i].actualTime = lastTime;
-                    lastTime = lastTime + 100/60 + this.trafficLightsNorthWay[i].carsOnQueue;
+                    lastTime = lastTime + 100/this.trafficLightsNorthWay[i].streetSpeed + this.trafficLightsNorthWay[i].carsOnQueue;
                 }
             } else {
                 let lastTime = 0;
                 for (let i = this.trafficLightsSouthWay.length - 1; i > 0; i--) {
                     this.trafficLightsNorthWay[i].actualTime = lastTime;
                     this.trafficLightsSouthWay[i].actualTime = lastTime;
-                    lastTime = lastTime + 100/60 + this.trafficLightsSouthWay[i].carsOnQueue;
+                    lastTime = lastTime + 100/this.trafficLightsNorthWay[i].streetSpeed + this.trafficLightsSouthWay[i].carsOnQueue;
                 }
             }
         }
@@ -87,6 +87,7 @@ export class TrafficLightRepository {
     }
 
     getAll(): TrafficLight[] {
+        console.log(this.trafficLightsNorthWay[0].actualTime);
         return this.trafficLightsNorthWay;
     }
 
