@@ -2,16 +2,19 @@
     {
         "id": 8,
         "streetSpeed": 10,
+        "place": "south",
         "position": 0,
         "greenTime": 40,
         "redTime": 20,
         "yellowTime": 3,
         "actualStatus": "red",
-        "carsOnQueue": 4
+        "carsOnQueue": 4,
+        "actualTime": 0
     },
     {
         "id": 80,
         "streetSpeed": 10,
+        "place": "south",
         "position": 100,
         "greenTime": 40,
         "redTime": 20,
@@ -23,6 +26,7 @@
     {
         "id": 228,
         "streetSpeed": 10,
+        "place": "south",
         "position": 200,
         "greenTime": 40,
         "redTime": 20,
@@ -34,6 +38,7 @@
     {
         "id": 229,
         "streetSpeed": 10,
+        "place": "south",
         "position": 300,
         "greenTime": 40,
         "redTime": 20,
@@ -45,6 +50,7 @@
     {
         "id": 230,
         "streetSpeed": 10,
+        "place": "south",
         "position": 400,
         "greenTime": 40,
         "redTime": 20,
@@ -56,6 +62,7 @@
     {
         "id": 231,
         "streetSpeed": 10,
+        "place": "south",
         "position": 500,
         "greenTime": 40,
         "redTime": 20,
@@ -67,6 +74,7 @@
     {
         "id": 232,
         "streetSpeed": 10,
+        "place": "south",
         "position": 600,
         "greenTime": 40,
         "redTime": 20,
@@ -78,6 +86,7 @@
     {
         "id": 234,
         "streetSpeed": 10,
+        "place": "south",
         "position": 700,
         "greenTime": 40,
         "redTime": 20,
@@ -89,6 +98,7 @@
     {
         "id": 235,
         "streetSpeed": 10,
+        "place": "south",
         "position": 800,
         "greenTime": 40,
         "redTime": 20,
@@ -100,6 +110,7 @@
     {
         "id": 236,
         "streetSpeed": 10,
+        "place": "south",
         "position": 900,
         "greenTime": 40,
         "redTime": 20,
@@ -111,6 +122,7 @@
     {
         "id": 262,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1000,
         "greenTime": 40,
         "redTime": 20,
@@ -122,6 +134,7 @@
     {
         "id": 263,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1100,
         "greenTime": 40,
         "redTime": 20,
@@ -133,6 +146,7 @@
     {
         "id": 264,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1200,
         "greenTime": 40,
         "redTime": 20,
@@ -144,6 +158,7 @@
     {
         "id": 265,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1300,
         "greenTime": 40,
         "redTime": 20,
@@ -155,6 +170,7 @@
     {
         "id": 266,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1400,
         "greenTime": 40,
         "redTime": 20,
@@ -166,6 +182,7 @@
     {
         "id": 267,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1500,
         "greenTime": 40,
         "redTime": 20,
@@ -177,6 +194,7 @@
     {
         "id": 268,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1600,
         "greenTime": 40,
         "redTime": 20,
@@ -188,6 +206,7 @@
     {
         "id": 269,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1700,
         "greenTime": 40,
         "redTime": 20,
@@ -199,6 +218,7 @@
     {
         "id": 270,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1800,
         "greenTime": 40,
         "redTime": 20,
@@ -210,6 +230,7 @@
     {
         "id": 273,
         "streetSpeed": 10,
+        "place": "south",
         "position": 1900,
         "greenTime": 40,
         "redTime": 20,
@@ -221,6 +242,7 @@
     {
         "id": 274,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2000,
         "greenTime": 40,
         "redTime": 20,
@@ -232,6 +254,7 @@
     {
         "id": 275,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2100,
         "greenTime": 40,
         "redTime": 20,
@@ -243,6 +266,7 @@
     {
         "id": 489,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2200,
         "greenTime": 40,
         "redTime": 20,
@@ -254,6 +278,7 @@
     {
         "id": 533,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2300,
         "greenTime": 40,
         "redTime": 20,
@@ -265,6 +290,7 @@
     {
         "id": 599,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2400,
         "greenTime": 40,
         "redTime": 20,
@@ -276,6 +302,7 @@
     {
         "id": 600,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2500,
         "greenTime": 40,
         "redTime": 20,
@@ -287,6 +314,7 @@
     {
         "id": 601,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2600,
         "greenTime": 40,
         "redTime": 20,
@@ -298,6 +326,7 @@
     {
         "id": 602,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2700,
         "greenTime": 40,
         "redTime": 20,
@@ -309,6 +338,7 @@
     {
         "id": 603,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2800,
         "greenTime": 40,
         "redTime": 20,
@@ -320,6 +350,7 @@
     {
         "id": 604,
         "streetSpeed": 10,
+        "place": "south",
         "position": 2900,
         "greenTime": 40,
         "redTime": 20,
