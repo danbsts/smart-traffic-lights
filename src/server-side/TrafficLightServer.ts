@@ -41,7 +41,6 @@ app.get('/calculate', function (req, res) {
 
 app.post('/update', function (req: express.Request, res: express.Response) {
     var trafficLight: UpdateTrafficLight = <UpdateTrafficLight> req.body;
-    console.log(req.body);
     if (trafficLight)
         var saved = trafficLights.updateTrafficLight(trafficLight.north, trafficLight.south);
     if (saved && trafficLight) {

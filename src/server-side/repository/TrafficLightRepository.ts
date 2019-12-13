@@ -87,7 +87,6 @@ export class TrafficLightRepository {
     }
 
     getAll(): TrafficLight[] {
-        console.log(this.trafficLightsNorthWay[0].actualTime);
         return this.trafficLightsNorthWay;
     }
 

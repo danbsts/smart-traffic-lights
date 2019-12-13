@@ -17,6 +17,7 @@ export class TrafficLightOperator {
             new Timer(this.getTime());
             this.trafficLight.actualStatus = this.trafficLight.nextStateOriginal(this.trafficLight.actualStatus);
             this.controller.update(this.trafficLight);
+            this.updateVehicles();
         }
     }
 
@@ -24,6 +25,10 @@ export class TrafficLightOperator {
         if(this.trafficLight.actualStatus == "red") return this.trafficLight.redTime;
         if(this.trafficLight.actualStatus == "yellow") return this.trafficLight.yellowTime;
         return this.trafficLight.greenTime;
+    }
+
+    updateVehicles() {
+        this.trafficLight.carsOnQueue = Math.floor(Math.random() * 20) + 1;
     }
 }
 
