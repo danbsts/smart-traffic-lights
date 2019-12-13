@@ -171,7 +171,7 @@
         "redTime": 20,
         "yellowTime": 3,
         "actualStatus": "green",
-        "carsOnQueue": 20,
+        "carsOnQueue": 2,
         "actualTime": 29
     },
     {
@@ -182,7 +182,7 @@
         "redTime": 20,
         "yellowTime": 3,
         "actualStatus": "green",
-        "carsOnQueue": 15,
+        "carsOnQueue": 1,
         "actualTime": 4
     },
     {
@@ -215,7 +215,7 @@
         "redTime": 20,
         "yellowTime": 3,
         "actualStatus": "green",
-        "carsOnQueue": 16,
+        "carsOnQueue": 6,
         "actualTime": 9
     },
     {
@@ -259,7 +259,7 @@
         "redTime": 20,
         "yellowTime": 3,
         "actualStatus": "green",
-        "carsOnQueue": 17,
+        "carsOnQueue": 7,
         "actualTime": 2
     },
     {

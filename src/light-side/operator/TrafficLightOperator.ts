@@ -1,5 +1,5 @@
 import { TrafficLight } from "../../common/TrafficLight";
-import { TrafficLightController } from "../TrafficLightController";
+import { TrafficLightController } from "../controller/TrafficLightController";
 
 export class TrafficLightOperator {
     trafficLight: TrafficLight;

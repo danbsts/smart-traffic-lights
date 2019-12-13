@@ -39,7 +39,7 @@ app.get('/calculate', function (req, res) {
     res.send(JSON.stringify("Calculando..."))
 })
 
-app.post('/refresh', function (req: express.Request, res: express.Response) {
+app.post('/update', function (req: express.Request, res: express.Response) {
     var trafficLight: UpdateTrafficLight = <UpdateTrafficLight> req.body;
     console.log(req.body);
     if (trafficLight)

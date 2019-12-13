@@ -1,6 +1,7 @@
 export class TrafficLight {
     id: number;
     streetSpeed: number;
+    place:string;
     position: number;
     greenTime: number;
     redTime: number;
@@ -9,9 +10,10 @@ export class TrafficLight {
     actualStatus: string;
     carsOnQueue: number;
 
-    constructor(id: number, streetSpeed: number, position: number, greenTime: number, redTime: number, actualStatus: string, carsOnQueue: number) {
+    constructor(id: number, streetSpeed: number, place: string, position: number, greenTime: number, redTime: number, actualStatus: string, carsOnQueue: number) {
         this.id = id;
         this.streetSpeed = streetSpeed;
+        this.place = place;
         this.position = position;
         this.greenTime = greenTime;
         this.redTime = redTime;
